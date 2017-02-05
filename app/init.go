@@ -2,7 +2,6 @@ package app
 
 import (
         "github.com/revel/revel"
-        "log"
         "github.com/dr013/carousel/app/models/mongodb"
 )
 
@@ -45,10 +44,10 @@ var HeaderFilter = func(c *revel.Controller, fc []revel.Filter) {
 }
 
 func initApp() {
-        Config, err := revel.LoadConfig("app.conf")
-        if err != nil || Config == nil {
-                log.Fatalf("%+v",err)
-        }
+        //Config, err := revel.LoadConfig("app.conf")
+        //if err != nil || Config == nil {
+        //        log.Fatalf("%+v",err)
+        //}
         mongodb.MaxPool = revel.Config.IntDefault("mongo.maxPool", 0)
         mongodb.PATH,_ = revel.Config.String("mongo.path")
         mongodb.DBNAME, _ = revel.Config.String("mongo.database")

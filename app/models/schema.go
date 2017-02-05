@@ -1,7 +1,7 @@
 package models
 
 import (
-        "carousel/app/models/mongodb"
+        "github.com/dr013/carousel/app/models/mongodb"
         "gopkg.in/mgo.v2/bson"
         "time"
 )
@@ -21,7 +21,7 @@ type Schema struct {
 }
 
 func newSchemaCollection() *mongodb.Collection {
-        return mongodb.NewCollectionSession("schemas")
+        return mongodb.NewCollectionSession("schema_list")
 }
 
 // AddSchema insert a new Schema into database and returns
