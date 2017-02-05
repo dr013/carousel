@@ -1,6 +1,10 @@
 package app
 
-import "github.com/revel/revel"
+import (
+        "github.com/revel/revel"
+        "log"
+        "github.com/dr013/carousel/app/models/mongodb"
+)
 
 func init() {
         // Filters is the default set of global filters.
@@ -19,10 +23,13 @@ func init() {
                 revel.ActionInvoker,           // Invoke the action.
         }
 
+
+
         // register startup functions with OnAppStart
         // ( order dependent )
         // revel.OnAppStart(InitDB)
         // revel.OnAppStart(FillCache)
+        revel.OnAppStart(initApp)
 }
 
 // TODO turn this into revel.HeaderFilter
@@ -35,4 +42,15 @@ var HeaderFilter = func(c *revel.Controller, fc []revel.Filter) {
         c.Response.Out.Header().Add("X-Content-Type-Options", "nosniff")
 
         fc[0](c, fc[1:]) // Execute the next filter stage.
+}
+
+func initApp() {
+        Config, err := revel.LoadConfig("app.conf")
+        if err != nil || Config == nil {
+                log.Fatalf("%+v",err)
+        }
+        mongodb.MaxPool = revel.Config.IntDefault("mongo.maxPool", 0)
+        mongodb.PATH,_ = revel.Config.String("mongo.path")
+        mongodb.DBNAME, _ = revel.Config.String("mongo.database")
+        mongodb.CheckAndInitServiceConnection()
 }
