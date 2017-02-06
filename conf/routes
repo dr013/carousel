@@ -15,8 +15,9 @@ GET     /public/*filepath                       Static.Serve("public")
 # Catch all
 *       /:controller/:action                    :controller.:action
 
-GET /schemas SchemaController.Index
-POST /schemas SchemaController.Create
-PUT /schemas SchemaController.Update
-GET /schemas/:id SchemaController.Show
-DELETE /schemas/:id SchemaController.Delete
+GET     /schemas SchemaController.Index
+POST    /schemas SchemaController.Create
+PUT     /schemas SchemaController.Update
+GET     /schemas/:id SchemaController.Show
+DELETE  /schemas/:id SchemaController.Delete
+
