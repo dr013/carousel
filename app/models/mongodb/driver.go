@@ -1,9 +1,8 @@
 package mongodb
 
 var MaxPool int
-var PATH    string
-var DBNAME  string
-
+var PATH string
+var DBNAME string
 
 func CheckAndInitServiceConnection() {
 	if service.baseSession == nil {
@@ -14,5 +13,3 @@ func CheckAndInitServiceConnection() {
 		}
 	}
 }
-
-

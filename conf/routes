@@ -14,3 +14,15 @@ GET     /public/*filepath                       Static.Serve("public")
 
 # Catch all
 *       /:controller/:action                    :controller.:action
+
+GET /product ProductController.Index
+POST /product ProductController.Create
+PUT /product ProductController.Update
+GET /product/:id ProductController.Show
+DELETE /product/:id ProductController.Delete
+
+GET /schema SchemaController.Index
+POST /schema SchemaController.Create
+PUT /schema SchemaController.Update
+GET /schema/:id SchemaController.Show
+DELETE /schema/:id SchemaController.Delete

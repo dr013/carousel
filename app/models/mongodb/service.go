@@ -33,4 +33,3 @@ func (s *Service) Close(c *Collection) {
 	s.queue <- 1
 	s.Open--
 }
-
