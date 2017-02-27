@@ -27,3 +27,4 @@ func NewCollectionSession(name string) *Collection {
 func (c *Collection) Close() {
 	service.Close(c)
 }
+

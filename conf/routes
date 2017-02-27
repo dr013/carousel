@@ -13,16 +13,10 @@ GET     /favicon.ico                            404
 GET     /public/*filepath                       Static.Serve("public")
 
 # Catch all
+GET /products ProductController.Index
+POST /products ProductController.Create
+PUT /products ProductController.Update
+GET /products/:id ProductController.Show
+DELETE /products/:id ProductController.Delete
+
 *       /:controller/:action                    :controller.:action
-
-GET /product ProductController.Index
-POST /product ProductController.Create
-PUT /product ProductController.Update
-GET /product/:id ProductController.Show
-DELETE /product/:id ProductController.Delete
-
-GET /schema SchemaController.Index
-POST /schema SchemaController.Create
-PUT /schema SchemaController.Update
-GET /schema/:id SchemaController.Show
-DELETE /schema/:id SchemaController.Delete

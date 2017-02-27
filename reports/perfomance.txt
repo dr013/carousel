@@ -1,0 +1,40 @@
+URL: /
+Transactions:		       10000 hits
+Availability:		      100.00 %
+Elapsed time:		       34.24 secs
+Data transferred:	        4.37 MB
+Response time:		        0.27 secs
+Transaction rate:	      292.06 trans/sec
+Throughput:		        0.13 MB/sec
+Concurrency:		       79.51
+Successful transactions:       10000
+Failed transactions:	           0
+Longest transaction:	       20.00
+Shortest transaction:	        0.00
+Transactions:		       40000 hits
+  Availability:		      100.00 %
+  Elapsed time:		      145.72 secs
+  Data transferred:	     2359.59 MB
+  Response time:		        0.33 secs
+  Transaction rate:	      274.50 trans/sec
+  Throughput:		       16.19 MB/sec
+  Concurrency:		       90.64
+  Successful transactions:       40000
+  Failed transactions:	           0
+  Longest transaction:	       24.53
+  Shortest transaction:	        0.00
+
+URL: siege -c 100 -b -r 100 http://127.0.0.1:9000/products
+Date: 20170227
+Transactions:		       10000 hits
+Availability:		      100.00 %
+Elapsed time:		       34.24 secs
+Data transferred:	        4.37 MB
+Response time:		        0.27 secs
+Transaction rate:	      292.06 trans/sec
+Throughput:		        0.13 MB/sec
+Concurrency:		       79.51
+Successful transactions:       10000
+Failed transactions:	           0
+Longest transaction:	       20.00
+Shortest transaction:	        0.00
