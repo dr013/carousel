@@ -1,12 +1,18 @@
 #!/bin/sh
 
-DAEMON=/some/program/to/run
-PARAMETERS="parameters to my program"
-LOGFILE=/var/log/somefile.log
+DAEMON=/srv/go/bin/revel
+mode=prod
+port=9090
+package="github.com/dr013/carousel"
+NAME="carousel"
+desc="CI/CD service Carousel"
+args="run ${package} ${mode} ${port}"
+LOGFILE=/var/log/carousel.log
+pidfile=/var/run/$name.pid
 
 start() {
-    echo -n "starting up $DAEMON"
-    RUN=`cd / && $DAEMON $PARAMETERS > $LOGFILE 2>&1`
+    echo -n "starting up $desc"
+    RUN=`cd $GOPATH && $DAEMON $args > $LOGFILE 2>&1`
 
     if [ "$?" -eq 0 ]; then
         echo "Done."
