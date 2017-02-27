@@ -2,7 +2,7 @@ package controllers
 
 import (
 	"github.com/revel/revel"
-	"github.com/dr013/product/app/models"
+	"github.com/dr013/carousel/app/models"
 )
 
 type App struct {
@@ -13,9 +13,11 @@ type App struct {
 func (c App) Index() revel.Result {
 	var (
 		products []models.Product
+		schemas  []models.Schema
 		err     error
 	)
 	products, err = models.GetProducts()
+	schemas, err = models.GetSchemas()
 
 	if err != nil {
 		errResp := buildErrResponse(err, "500")
@@ -23,5 +25,5 @@ func (c App) Index() revel.Result {
 		return c.RenderJson(errResp)
 	}
 	c.Response.Status = 200
-	return c.Render(products)
+	return c.Render(products, schemas)
 }

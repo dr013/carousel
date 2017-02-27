@@ -5,7 +5,7 @@ import (
 	"errors"
 	"github.com/revel/revel"
 	"gopkg.in/mgo.v2/bson"
-	"github.com/dr013/product/app/models"
+	"github.com/dr013/carousel/app/models"
 )
 
 type ProductController struct {

@@ -3,7 +3,7 @@ package models
 import (
         "gopkg.in/mgo.v2/bson"
         "time"
-        "github.com/dr013/product/app/models/mongodb"
+        "github.com/dr013/carousel/app/models/mongodb"
 )
 
 type Product struct {
@@ -28,6 +28,7 @@ func AddProduct(m Product) (product Product, err error) {
         defer c.Close()
         m.ID = bson.NewObjectId()
         m.CreatedAt = time.Now()
+        m.UpdatedAt = time.Now()
         return m, c.Session.Insert(m)
 }
 

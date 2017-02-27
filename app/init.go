@@ -2,7 +2,7 @@ package app
 
 import (
 	"github.com/revel/revel"
-	"github.com/dr013/product/app/models/mongodb"
+	"github.com/dr013/carousel/app/models/mongodb"
 )
 
 func init() {
