@@ -12,11 +12,18 @@ GET     /favicon.ico                            404
 # Map static resources from the /app/public folder to the /public path
 GET     /public/*filepath                       Static.Serve("public")
 
-# Catch all
-GET /products ProductController.Index
-POST /products ProductController.Create
-PUT /products ProductController.Update
-GET /products/:id ProductController.Show
-DELETE /products/:id ProductController.Delete
 
+GET     /products                               ProductController.Index
+POST    /products                               ProductController.Create
+PUT     /products                               ProductController.Update
+GET     /products/:id                           ProductController.Show
+DELETE  /products/:id                           ProductController.Delete
+
+GET     /schemas                                SchemaController.Index
+POST    /schemas                                SchemaController.Create
+PUT     /schemas                                SchemaController.Update
+GET     /schemas/:id                            SchemaController.Show
+DELETE  /schemas/:id                            SchemaController.Delete
+
+# Catch all
 *       /:controller/:action                    :controller.:action
