@@ -3,6 +3,7 @@ package controllers
 import (
 	"github.com/revel/revel"
 	"github.com/dr013/carousel/app/models"
+	"time"
 )
 
 type App struct {
@@ -25,5 +26,6 @@ func (c App) Index() revel.Result {
 		return c.RenderJson(errResp)
 	}
 	c.Response.Status = 200
-	return c.Render(products, schemas)
+	d := time.Now().Year()
+	return c.Render(products, schemas, d)
 }
