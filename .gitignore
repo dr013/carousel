@@ -2,6 +2,8 @@ test-results/
 tmp/
 routes/
 .idea/
+log/
+
 # Compiled Object files, Static and Dynamic libs (Shared Objects)
 *.o
 *.a
@@ -20,6 +22,7 @@ _test
 _cgo_defun.c
 _cgo_gotypes.go
 _cgo_export.*
+*.pid
 
 _testmain.go
 
