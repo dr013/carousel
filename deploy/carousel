@@ -13,8 +13,10 @@
 USER="master" # User we wil run Go as
 GOPATH="/srv/go" # GOPATH
 GOROOT="/usr/local/go" # used by revel
-GO_CMD="revel run github.com/dr013/carousel"
-WORKDIR="/srv/go/github.com/dr013/carousel"
+PORT=9090
+MODE=prod
+GO_CMD="revel run github.com/dr013/carousel $MODE $PORT"
+WORKDIR="/srv/go/src/github.com/dr013/carousel"
 NAME="carousel"
 
 ###### Start script ########################################################
@@ -41,10 +43,10 @@ case "$1" in
   export GOROOT="$GOROOT"
   export GOPATH="$GOPATH"
   export PATH="${PATH}:${GOROOT}/bin:${GOPATH}/bin"
-        /bin/su -m -l $USER -c "$GO_CMD" > "$WORKDIR/$NAME.log" 2>&1 &
+        /bin/su -m -l $USER -c "$GO_CMD" > "$WORKDIR/log/$NAME.log" 2>&1 &
         PID=$!
         echo $PID > "$WORKDIR/$NAME.pid"
-        echo "Started with pid $PID - Logging to $WORKDIR/$NAME.log" && exit 0
+        echo "Started with pid $PID - Logging to $WORKDIR/log/$NAME.log" && exit 0
         ;;
       stop)
         echo "Stopping $NAME ..."
@@ -83,3 +85,4 @@ case "$1" in
 esac
 
 exit 0
+
