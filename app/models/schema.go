@@ -89,3 +89,23 @@ func GetSchema(id bson.ObjectId) (Schema, error) {
 	err = c.Session.Find(bson.M{"_id": id}).One(&schema)
 	return schema, err
 }
+
+//func CheckToken(token string, project string) bool{
+//	var (
+//		result bool
+//	        err error
+//		instance &Project
+//	)
+//
+//	c := NewProjectCollection()
+//	defer c.Close()
+//
+//	err = c.Session.Find(bson.M{"project": project}).One(&instance)
+//
+//	if instance == nil {
+//
+//	}
+//
+//
+//	return result
+//}

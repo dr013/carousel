@@ -24,6 +24,7 @@ POST    /schemas                                SchemaController.Create
 PUT     /schemas                                SchemaController.Update
 GET     /schemas/:id                            SchemaController.Show
 DELETE  /schemas/:id                            SchemaController.Delete
+GET     /schema/get                             SchemaController.Lock
 
 # Catch all
 *       /:controller/:action                    :controller.:action
