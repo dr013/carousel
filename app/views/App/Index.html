@@ -20,6 +20,7 @@
             </div>
         {{else}}
             <form class="navbar-form navbar-right" method="post" action="{{url "App.Login"}}">
+                <input type="hidden" name="csrf_token" value="{{.csrf_token }}">
                 <div class="form-group">
                     <input type="text" placeholder="BPC Login" class="form-control" name="user">
                 </div>
