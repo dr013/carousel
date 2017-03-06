@@ -1,0 +1,13 @@
+{
+  "name": "carousel",
+  "homepage": "https://github.com/dr013/carousel",
+  "authors": [
+    "Evgeny Krukov <krukov@bpcbt.com>"
+  ],
+  "description": "RestFul API for CI/CD",
+  "main": "views/App/header.html",
+  "license": "MIT",
+  "dependencies": {
+    "jquery-ujs": "^1.2.2"
+  }
+}
