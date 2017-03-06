@@ -1,0 +1,10 @@
+{
+  "task": "task",
+  "db_name": "sv",
+  "db_login": "main2",
+  "db_host": "localhost",
+  "db_password": "main1",
+  "db_port": 1521,
+  "db_size": 100,
+  "locked_date": null
+}
