@@ -16,7 +16,7 @@
         {{if .session.auth}}
             <div class="navbar-right">
         <a class="navbar-brand" href="{{ url "App.Index" }}">Logged in as {{ .session.user }}</a>
-        <a class="navbar-brand" href="{{ url "App.Logout"}}">Logout</a>
+        <a class="navbar-brand" href="{{url "App.Logout"}}" data-method="post">Logout</a>
             </div>
         {{else}}
             <form class="navbar-form navbar-right" method="post" action="{{url "App.Login"}}">

@@ -1,0 +1,22 @@
+{
+  "name": "carousel",
+  "version": "1.0.0",
+  "description": "CI Restful API service",
+  "main": "index.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dr013/carousel.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dr013/carousel/issues"
+  },
+  "homepage": "https://github.com/dr013/carousel#readme"
+}
