@@ -1,0 +1,16 @@
+{
+    "dependencies": {
+        "github.com/cbonello/revel-csrf": {
+            "branch": "master"
+        },
+        "github.com/revel/modules": {
+            "branch": "master"
+        },
+        "github.com/revel/revel": {
+            "branch": "master"
+        },
+        "gopkg.in/mgo.v2": {
+            "branch": "v2"
+        }
+    }
+}

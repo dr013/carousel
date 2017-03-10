@@ -1,0 +1,116 @@
+{
+    "memo": "eba4054a563635fef4bdf660178d1b0be13f6f6eefefdecf5ce86ac07bdd978c",
+    "projects": [
+        {
+            "name": "github.com/agtorre/gocolorize",
+            "version": "v1.0.0",
+            "revision": "f42b554bf7f006936130c9bb4f971afd2d87f671",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/cbonello/revel-csrf",
+            "branch": "master",
+            "revision": "4dd0f3c795bb32e987fe8eea7f13078581ada38d",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/klauspost/compress",
+            "version": "v1.2.1",
+            "revision": "6c8db69c4b49dd4df1fff66996cf556176d0b9bf",
+            "packages": [
+                "flate",
+                "gzip",
+                "zlib"
+            ]
+        },
+        {
+            "name": "github.com/klauspost/cpuid",
+            "version": "v1.0",
+            "revision": "09cded8978dc9e80714c4d85b0322337b0a1e5e0",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/klauspost/crc32",
+            "version": "v1.1",
+            "revision": "cb6bfca970f6908083f26f39a79009d608efd5cd",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/revel/config",
+            "version": "v0.13.0",
+            "revision": "75f5ee659b5338d1ce823536fe9b9e50b4de01b4",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "github.com/revel/modules",
+            "branch": "master",
+            "revision": "7c4f4434e7d4f197658ffd1e2207daaed744d351",
+            "packages": [
+                "static/app/controllers"
+            ]
+        },
+        {
+            "name": "github.com/revel/revel",
+            "branch": "master",
+            "revision": "76317cad1c6fb0b812845b2ff6a8881d11ee9980",
+            "packages": [
+                ".",
+                "testing"
+            ]
+        },
+        {
+            "name": "github.com/robfig/pathtree",
+            "branch": "master",
+            "revision": "41257a1839e945fce74afd070e02bab2ea2c776a",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "golang.org/x/net",
+            "branch": "master",
+            "revision": "a6577fac2d73be281a500b310739095313165611",
+            "packages": [
+                "websocket"
+            ]
+        },
+        {
+            "name": "golang.org/x/sys",
+            "branch": "master",
+            "revision": "99f16d856c9836c42d24e7ab64ea72916925fa97",
+            "packages": [
+                "unix"
+            ]
+        },
+        {
+            "name": "gopkg.in/fsnotify.v1",
+            "version": "v1.4.2",
+            "revision": "629574ca2a5df945712d3079857300b5e4da0236",
+            "packages": [
+                "."
+            ]
+        },
+        {
+            "name": "gopkg.in/mgo.v2",
+            "branch": "v2",
+            "revision": "3f83fa5005286a7fe593b055f0d7771a7dce4655",
+            "packages": [
+                ".",
+                "bson",
+                "internal/json",
+                "internal/sasl",
+                "internal/scram"
+            ]
+        }
+    ]
+}
