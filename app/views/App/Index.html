@@ -52,17 +52,15 @@
                 <th>Connect String</th>
                 <th>Schema Weight, Point</th>
                 <th>Locked Date</th>
-                <th>Updated At</th>
             </tr>
             </thead>
             <tbody>
             {{range $rec := .schemas}}
-            <tr>
+            <tr {{if $rec.Task }}class="danger" {{else}}class="success"{{end}}>
                 <td>{{$rec.Task}}</td>
                 <td>{{$rec.DbLogin}}/********@{{$rec.DbHost}}:{{$rec.DbPort}}//{{$rec.DbName}}</td>
                 <td>{{$rec.DbSize}}</td>
                 <td>{{datetime $rec.LockedDate}}</td>
-                <td>{{datetime $rec.UpdatedAt}}</td>
             </tr>
             {{end}}
             </tbody>

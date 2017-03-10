@@ -2,7 +2,7 @@ package app
 
 import (
 	"github.com/dr013/carousel/app/models/mongodb"
-	"github.com/cbonello/revel-csrf"
+	//"github.com/cbonello/revel-csrf"
 	"github.com/revel/revel"
 )
 
@@ -18,7 +18,7 @@ func init() {
 		revel.ValidationFilter,        // Restore kept validation errors and save new ones from cookie.
 		revel.I18nFilter,              // Resolve the requested language
 		HeaderFilter,                  // Add some security based headers
-		csrf.CSRFFilter,               // CSRF prevention.
+		//csrf.CSRFFilter,               // CSRF prevention.
 		revel.InterceptorFilter,       // Run interceptors around the action.
 		revel.CompressFilter,          // Compress the result.
 		revel.ActionInvoker,           // Invoke the action.
