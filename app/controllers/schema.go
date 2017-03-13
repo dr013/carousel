@@ -66,10 +66,13 @@ func (c SchemaController) Lock(id string) revel.Result {
 		task     string
 		product  string
 	)
+	revel.INFO.Println("Lock schema start")
 	c.Params.Bind(&token, "token")
+	revel.INFO.Println("Token ", token)
 	c.Params.Bind(&task, "task")
+	revel.INFO.Println("Task ", task)
 	c.Params.Bind(&product, "product")
-
+	revel.INFO.Println("Product ", product)
 
 	schemaID, err = convertToObjectIdHex(id)
 	if err != nil {
@@ -86,6 +89,7 @@ func (c SchemaController) Lock(id string) revel.Result {
 	}
 
 	c.Response.Status = 200
+	revel.INFO.Println("Finish Lock")
 	return c.RenderJson(schema)
 }
 
